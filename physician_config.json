@@ -1,0 +1,70 @@
+{
+  "physicians": [
+    {
+      "first_name": "John",
+      "last_name": "Doe",
+      "name": "John Doe",
+      "initials": "JD",
+      "preferred_tasks": [
+        "CTU",
+        "ER"
+      ],
+      "discontinuity_preference": true,
+      "desired_working_weeks": 0.75,
+      "restricted_tasks": [
+        "CTU"
+      ],
+      "exclusion_tasks": [
+        "CTU"
+      ]
+    },
+    {
+      "first_name": "Jane",
+      "last_name": "Smith",
+      "name": "Jane Smith",
+      "initials": "JS",
+      "preferred_tasks": [
+        "ER",
+        "CTU"
+      ],
+      "discontinuity_preference": false,
+      "desired_working_weeks": 1.0,
+      "restricted_tasks": [
+        "ER"
+      ],
+      "exclusion_tasks": []
+    },
+    {
+      "first_name": "Eric",
+      "last_name": "Yamga",
+      "name": "Eric Yamga",
+      "initials": "EY",
+      "preferred_tasks": [
+        "ER",
+        "CTU"
+      ],
+      "discontinuity_preference": false,
+      "desired_working_weeks": 1.0,
+      "restricted_tasks": [
+        "ER"
+      ],
+      "exclusion_tasks": []
+    },
+    {
+      "first_name": "Justine",
+      "last_name": "Munger",
+      "name": "Justine Munger",
+      "initials": "JM",
+      "preferred_tasks": [
+        "ER",
+        "CTU"
+      ],
+      "discontinuity_preference": false,
+      "desired_working_weeks": 1.0,
+      "restricted_tasks": [
+        "ER"
+      ],
+      "exclusion_tasks": []
+    }
+  ]
+}

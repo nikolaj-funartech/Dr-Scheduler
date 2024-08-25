@@ -1,0 +1,67 @@
+{
+  "categories": [
+    {
+      "name": "CTU",
+      "days_parameter": "Multi-week",
+      "number_of_weeks": 2,
+      "weekday_revenue": 2000,
+      "call_revenue": 4000,
+      "restricted": false
+    },
+    {
+      "name": "ER",
+      "days_parameter": "Continuous",
+      "number_of_weeks": 1,
+      "weekday_revenue": 2500,
+      "call_revenue": 5000,
+      "restricted": true
+    }
+  ],
+  "tasks": [
+    {
+      "category": "CTU",
+      "type": "Main",
+      "name": "CTU_A",
+      "week_offset": 0,
+      "heaviness": 4,
+      "mandatory": true
+    },
+    {
+      "category": "CTU",
+      "type": "Main",
+      "name": "CTU_B",
+      "week_offset": 1,
+      "heaviness": 4,
+      "mandatory": true
+    },
+    {
+      "category": "CTU",
+      "type": "Call",
+      "name": "CTU_AB_CALL",
+      "week_offset": 0,
+      "heaviness": 5,
+      "mandatory": true
+    },
+    {
+      "category": "ER",
+      "type": "Main",
+      "name": "ER_1",
+      "week_offset": 0,
+      "heaviness": 5,
+      "mandatory": true
+    },
+    {
+      "category": "ER",
+      "type": "Call",
+      "name": "ER_CALL",
+      "week_offset": 0,
+      "heaviness": 5,
+      "mandatory": true
+    }
+  ],
+  "linkage_manager": {
+    "CTU_A": "CTU_AB_CALL",
+    "CTU_B": "CTU_AB_CALL",
+    "ER_1": "ER_CALL"
+  }
+}
