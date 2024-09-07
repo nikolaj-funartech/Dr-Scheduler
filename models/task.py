@@ -68,6 +68,7 @@ class Task:
         heaviness (int): The heaviness or difficulty of the task (scale 0-5).
         mandatory (bool): Indicates if the task is mandatory or optional.
     """
+
     def __init__(self, category: TaskCategory, task_type: str, name: str,
                  week_offset: int = 0, heaviness: int = 0, mandatory: bool = True):
         self.category = category
@@ -106,6 +107,7 @@ class Task:
     @property
     def task_type(self) -> TaskType:
         return self.type
+
     @property
     def days_parameter(self) -> TaskDaysParameter:
         return self.category.days_parameter

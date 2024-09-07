@@ -37,10 +37,18 @@
     {
       "category": "CTU",
       "type": "Call",
-      "name": "CTU_AB_CALL",
+      "name": "CTU_A_CALL",
       "week_offset": 0,
       "heaviness": 5,
-      "mandatory": true
+      "mandatory": false
+    },
+    {
+      "category": "CTU",
+      "type": "Call",
+      "name": "CTU_B_CALL",
+      "week_offset": 0,
+      "heaviness": 5,
+      "mandatory": false
     },
     {
       "category": "ER",
@@ -56,12 +64,12 @@
       "name": "ER_CALL",
       "week_offset": 0,
       "heaviness": 5,
-      "mandatory": true
+      "mandatory": false
     }
   ],
   "linkage_manager": {
-    "CTU_A": "CTU_AB_CALL",
-    "CTU_B": "CTU_AB_CALL",
+    "CTU_A": "CTU_A_CALL",
+    "CTU_B": "CTU_B_CALL",
     "ER_1": "ER_CALL"
   }
 }

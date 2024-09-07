@@ -1,7 +1,8 @@
 from models.task import TaskCategory, Task, TaskDaysParameter
 from models.physician import Physician
 from models.calendar import Calendar
-from models.schedule import Schedule
+# from models.schedule import Schedule
+from models.math_schedule import MathSchedule
 from collections import defaultdict
 
 from config.managers import TaskManager, PhysicianManager
@@ -35,13 +36,17 @@ task_manager.add_category(er_category)
 # Add tasks
 task_manager.add_task(Task.create(ctu_category, 'Main', 'CTU_A', heaviness=4))
 task_manager.add_task(Task.create(ctu_category, 'Main', 'CTU_B', week_offset=1, heaviness=4))
-task_manager.add_task(Task.create(ctu_category, 'Call', 'CTU_AB_CALL', heaviness=5))
+# task_manager.add_task(Task.create(ctu_category, 'Call', 'CTU_AB_CALL', heaviness=5))
+task_manager.add_task(Task.create(ctu_category, 'Call', 'CTU_A_CALL', heaviness=5, mandatory=False))
+task_manager.add_task(Task.create(ctu_category, 'Call', 'CTU_B_CALL', heaviness=5, mandatory=False))
 task_manager.add_task(Task.create(er_category, 'Main', 'ER_1', heaviness=5))
-task_manager.add_task(Task.create(er_category, 'Call', 'ER_CALL', heaviness=5))
+task_manager.add_task(Task.create(er_category, 'Call', 'ER_CALL', heaviness=5, mandatory=False))
 
 # Link tasks
-task_manager.link_tasks('CTU_A', 'CTU_AB_CALL')
-task_manager.link_tasks('CTU_B', 'CTU_AB_CALL')
+# task_manager.link_tasks('CTU_A', 'CTU_AB_CALL')
+# task_manager.link_tasks('CTU_B', 'CTU_AB_CALL')
+task_manager.link_tasks('CTU_A', 'CTU_A_CALL')
+task_manager.link_tasks('CTU_B', 'CTU_B_CALL')
 task_manager.link_tasks('ER_1', 'ER_CALL')
 
 # Save and load task configuration
@@ -121,7 +126,7 @@ calendar.preview_periods(periods)
 
 # Scheduler
 # Create the Schedule object
-schedule = Schedule(loaded_physician_manager, loaded_task_manager, loaded_calendar)
+schedule = MathSchedule(loaded_physician_manager, loaded_task_manager, loaded_calendar)
 
 # Set the scheduling period
 start_date = date(2023, 1, 1)

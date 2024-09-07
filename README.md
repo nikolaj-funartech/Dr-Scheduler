@@ -115,6 +115,11 @@ The Physician Task Scheduler is a Python-based application designed to manage an
     calendar.save_calendar("calendar.json")
     ```
 
+8. **Visualize the schedule**:
+    ```shell
+    streamlit run streamlit_calendar_demo.py
+    ```
+    
 ## Contributing
 1. Fork the repository.
 2. Create a new branch (`git checkout -b feature-branch`).
