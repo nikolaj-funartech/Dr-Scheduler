@@ -168,3 +168,6 @@ schedule.generate_ics_calendar("generated_calendar.ics")
 
 
 schedule.print_schedule()
+
+# save schedule for the streamlit calendar demo
+schedule.save_schedule("generated_schedule.json")
